@@ -16,3 +16,56 @@ select * from users;
 shows uses content
 
 
+ DROP database database_name;    (removes a databse)
+
+
+CREATE TABLE example_table_name (
+    example_column1 data_type,
+    example_column2 data_type,
+    example_column3 data_type
+);
+
+ CREATE TABLE book_inventory (
+    book_id INT AUTO_INCREMENT PRIMARY KEY,
+    book_name VARCHAR(255) NOT NULL,
+    publication_date DATE
+);
+
+
+DESCRIBE book_inventory;
+If we want to know what columns are contained within a table (and their data type), we can describe them using the DESCRIBE command (which can also be abbreviated to DESC). 
+
+
+ALTER TABLE book_inventory
+ADD page_count INT;
+Once you have created a table, there may come a time when your need for the dataset changes, and you need to alter the table. This can be done using the ALTER statement. Let’s now imagine that we have decided that we actually want to have a column in our book inventory that has the page count for each book. Add this to our table using the following statement:
+
+ DROP TABLE table_name;
+
+
+CRUD
+CRUD stands for Create, Read, Update, and Delete, 
+
+Create Operation (INSERT)
+INSERT INTO books (id, name, published_date, description)
+    VALUES (1, "Android Security Internals", "2014-10-14", "An In-Depth Guide to Android's Security Architecture");
+
+
+Read Operation (SELECT)
+SELECT * FROM books;
+SELECT name, description FROM books;
+
+Update Operation (UPDATE)
+UPDATE books
+    SET description = "An In-Depth Guide to Android's Security Architecture."
+    WHERE id = 1;
+
+Delete Operation (DELETE)
+ DELETE FROM books WHERE id = 1;
+
+
+
+
+
+
+
