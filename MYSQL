@@ -173,6 +173,8 @@ MIN()
  SELECT MIN(published_date) AS earliest_book FROM books;
 
 
+select group_concat(name separator '& ') as name from hacking_tools where
+ amount not like "%0";
 
 
 
