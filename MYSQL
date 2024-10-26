@@ -63,9 +63,32 @@ UPDATE books
 Delete Operation (DELETE)
  DELETE FROM books WHERE id = 1;
 
+Create (INSERT statement) - Adds a new record to the table.
+Read (SELECT statement) - Retrieves record from the table.
+Update (UPDATE statement) - Modifies existing data in the table.
+Delete (DELETE statement) - Removes record from the table.
 
 
+CLAUSES
+ DISTINCT, GROUP BY, ORDER BY, and HAVING
 
+DISTINCT:  SELECT DISTINCT name FROM books;
 
+GROUP BY: SELECT name, COUNT(*)
+    FROM books
+    GROUP BY name;.
+
+ORDER BY: SELECT *
+    FROM books
+    ORDER BY published_date ASC;
+
+ SELECT *
+    FROM books
+    ORDER BY published_date DESC;
+
+HAVING: SELECT name, COUNT(*)
+    FROM books
+    GROUP BY name
+    HAVING name LIKE '%Hack%';
 
 
