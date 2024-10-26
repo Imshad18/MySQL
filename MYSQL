@@ -125,4 +125,55 @@ NOT EQUAL TO:  SELECT *
     FROM books
     WHERE category != "Offensive Security";
 
+LESS THAN: SELECT *
+    FROM books
+    WHERE published_date < "2020-01-01";
+
+GREATER THAN: SELECT *
+    FROM books
+    WHERE published_date > "2020-01-01";
+
+LESS THAN OR EQUAL TO: SELECT *
+    FROM books
+    WHERE published_date <= "2020-01-01";
+
+GREATER THAN OR EQUAL TO: SELECT *
+    FROM books
+    WHERE published_date >= "2020-01-01";
+
+
+
+
+FUNCTIONS
+
+Concat()
+SELECT CONCAT(name, " is a type of ", category, " book.") AS book_info FROM books;
+
+Group_Concat()
+SELECT category, GROUP_CONCAT(name SEPARATOR ", ") AS books
+    FROM books
+    GROUP BY category;
+
+SUBSTRING()
+SELECT SUBSTRING(published_date, 1, 4) AS published_year FROM books;
+
+LENGTH()
+SELECT LENGTH(name) AS name_length FROM books;
+
+COUNT()
+SELECT COUNT(*) AS total_books FROM books;
+
+SUM()
+SELECT SUM(price) AS total_price FROM books;
+
+MAX()
+SELECT MAX(published_date) AS latest_book FROM books;
+
+MIN()
+ SELECT MIN(published_date) AS earliest_book FROM books;
+
+
+
+
+
 
