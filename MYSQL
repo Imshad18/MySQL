@@ -92,3 +92,37 @@ HAVING: SELECT name, COUNT(*)
     HAVING name LIKE '%Hack%';
 
 
+
+OPERATORS
+
+LIKE: SELECT *
+    FROM books
+    WHERE description LIKE "%guide%";
+
+AND: SELECT *
+    FROM books
+    WHERE category = "Offensive Security" AND name = "Bug Bounty Bootcamp";
+
+OR: SELECT *
+    FROM books
+    WHERE name LIKE "%Android%" OR name LIKE "%iOS%"; 
+
+NOT: SELECT *
+    FROM books
+    WHERE NOT description LIKE "%guide%";
+
+BETWEEN: SELECT *
+    FROM books
+    WHERE id BETWEEN 2 AND 4;
+
+
+COMPARISON
+EQUAL TO: SELECT *
+    FROM books
+    WHERE name = "Designing Secure Software";
+
+NOT EQUAL TO:  SELECT *
+    FROM books
+    WHERE category != "Offensive Security";
+
+
