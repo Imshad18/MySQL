@@ -1,0 +1,18 @@
+MYSQL
+
+mysql -u root -p 
+then enter password
+
+
+CREATE DATABASE database_name;
+
+show databases;
+shows everthing
+
+ USE thm_bookmarket_db;  (selects a database)
+show tables;
+shows all tables (users, tools, etc)
+select * from users;
+shows uses content
+
+
